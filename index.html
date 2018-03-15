@@ -24,10 +24,15 @@
 
         header {
             text-align: center;
-            padding: 24px 0;
+            padding: 48px 0 24px 0;
         }
 
-        header h1 { margin-bottom: 0; }
+        header img {
+            display: inline-block;
+            border-radius: 50%;
+        }
+
+        header h1 { margin: 12px 0 0 0; }
         header p { margin-top: 6px; }
 
         section {
@@ -40,11 +45,22 @@
         article h3 { margin-bottom: 4px; }
         article h4 { margin: 0 0 6px 0; }
         p:last-child { margin-bottom: 0; }
+
+        footer {
+            margin: 48px 0 24px 0;
+            text-align: center;
+        }
+
+        footer h5 {
+            display: inline-block;
+            margin: 0 6px;
+        }
     </style>
 </head>
 
 <body>
     <header>
+        <img src="img/ben.jpg" width="240" height="240" alt="Atlanta Web Developer Ben Yarbrough at Laracon in 2016">
         <h1>Ben Yarbrough</h1>
         <p>Senior Web Developer</p>
     </header>
@@ -127,7 +143,7 @@
 
         <article>
             <h3>Freelance Web Designer / Developer</h3>
-            <h4>Self Employed</h4>
+            <h4>Self-Employed</h4>
             <aside>2007 – 2009 • 2 yrs</aside>
             <p>Freelance web design and development for various clients.</p>
         </article>
@@ -174,5 +190,10 @@
             <li>Multiple operating systems (Mac, Linux, Windows)</li>
         </ul>
     </section>
+
+    <footer>
+        <h5><a href="https://www.linkedin.com/in/benyarb/" target="_blank">Contact Me</a></h5>
+        <h5><a href="https://github.com/benyarb/benyarb.github.io" target="_blank">View the Code</a></h5>
+    </footer>
 </body>
 </html>
