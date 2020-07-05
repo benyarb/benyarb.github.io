@@ -124,7 +124,7 @@
         <section>
             <h3>Senior Engineer</h3>
             <h4>Digital Additive</h4>
-            <aside>May 2015 – Present &nbsp;•&nbsp; 5 yrs</aside>
+            <aside>May 2015 – Present &nbsp;•&nbsp; <span id="duration">5 years</span></aside>
 
             <p>
                 Web application development with PHP, Laravel, Vue.js, ES6, DataTables, Twitter Bootstrap, jQuery, and Laravel Spark.
@@ -232,5 +232,17 @@
         <h5 id="print"><a href="javascript:window.print()">Print Résumé</a></h5>
         <p id="copyright"><small>© 2018 Ben Yarbrough</small></p>
     </footer>
+    
+    <script>
+        var start = moment([2015, 3]),
+        now = moment(),
+        yearsAgo = now.diff(start, 'years'),
+        monthsAgo = (now.diff(start, 'months')) % 12,
+        years = `${ yearsAgo } years`,
+        months = (monthsAgo > 0) ? `${ monthsAgo } months` : '',
+        duration = `${ years } ${ months }`;
+
+        document.getElementById("duration").innerHTML = duration;
+    </script>
 </body>
 </html>
