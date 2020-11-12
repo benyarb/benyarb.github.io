@@ -230,12 +230,13 @@
         <h5><a href="https://www.linkedin.com/in/benyarb/" target="_blank" rel="noopener">Contact Me</a></h5>
         <h5><a href="https://github.com/benyarb/benyarb.github.io" target="_blank" rel="noopener">View the Code</a></h5>
         <h5 id="print"><a href="javascript:window.print()">Print Résumé</a></h5>
-        <p id="copyright"><small>© 2018 Ben Yarbrough</small></p>
+        <p id="copyright"><small>© <span id="year"></span> Ben Yarbrough</small></p>
     </footer>
     
     <script src="js/moment.min.js"></script>
     
     <script>
+        // employment duration for current position
         var start = moment([2015, 3]),
         now = moment(),
         yearsAgo = now.diff(start, 'years'),
@@ -243,8 +244,11 @@
         years = `${ yearsAgo } years`,
         months = (monthsAgo > 0) ? `${ monthsAgo } months` : '',
         duration = `${ years } ${ months }`;
-
+        
         document.getElementById("duration").innerHTML = duration;
+        
+        // copyright year
+        document.getElementById('year').innerHTML = new Date().getFullYear();
     </script>
 </body>
 </html>
