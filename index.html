@@ -233,19 +233,18 @@
         <p id="copyright"><small>© <span id="year"></span> Ben Yarbrough</small></p>
     </footer>
     
-    <script src="js/moment.min.js"></script>
-    
     <script>
-        // employment duration for current position
-        var start = moment([2015, 3]),
-        now = moment(),
-        yearsAgo = now.diff(start, 'years'),
-        monthsAgo = (now.diff(start, 'months')) % 12,
-        years = `${ yearsAgo } years`,
-        months = (monthsAgo > 0) ? `${ monthsAgo } months` : '',
-        duration = `${ years } ${ months }`;
+        function timeSince(date) {
+            var seconds = Math.floor((new Date() - new Date(date)) / 1000),
+                yearsAgo = Math.floor(seconds / 31536000),
+                monthsAgo = Math.floor(seconds / 2592000) % 12,
+                years = (yearsAgo > 0) ? `${ yearsAgo } year${yearsAgo !== 1 ? 's' : ''}` : '',
+                months = (monthsAgo > 0) ? `${ monthsAgo } month${monthsAgo !== 1 ? 's' : ''}` : '';
+
+            return `${ years } ${ months }`.trim();
+        }
         
-        document.getElementById("duration").innerHTML = duration;
+        document.getElementById("duration").innerHTML = timeSince('May 2015');
         
         // copyright year
         document.getElementById('year').innerHTML = new Date().getFullYear();
