@@ -70,7 +70,7 @@
             }
 
             header { margin-bottom: 30px; }
-            /*header img { display: none; }*/
+            header img { display: none; }
 
             a {
                 text-decoration: none;
@@ -79,6 +79,7 @@
 
             a[href]:after { content: ": " attr(href); }
             a[href^="#"]:after { content: ""; }
+            a[href^="mailto"]:after { content: "contact@benyarb.com"; }
 
             p, h2, h3 {
                 orphans: 3;
@@ -231,7 +232,7 @@
     </article>
 
     <footer>
-        <h5><a href="https://www.linkedin.com/in/benyarb/" target="_blank" rel="noopener">Contact Me</a></h5>
+        <h5><a href="mailto:contact@benyarb.com">Contact Me</a></h5>
         <h5><a href="https://github.com/benyarb/benyarb.github.io" target="_blank" rel="noopener">View the Code</a></h5>
         <h5 id="print"><a href="javascript:window.print()">Print Résumé</a></h5>
         <p id="copyright"><small>© <span id="year"></span> Ben Yarbrough</small></p>
