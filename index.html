@@ -123,11 +123,11 @@
         
         <section>
             <h3>Co-Founder</h3>
-            <h4>YARB</h4>
+            <h4>Yarb</h4>
             <aside>October 2021 – Present &nbsp;•&nbsp; <span id="duration">1 year 8 months</span></aside>
 
             <p>
-                YARB provides thoughtful solutions to complex problems in web2, web3, marketing, community, social media, communications, and digital strategy.
+                Yarb provides thoughtful solutions to complex problems in web2, web3, marketing, community, social media, communications, and digital strategy.
                 Web application development with TypeScript, JavaScript, React, Next.js, GraphQL, Flow Blockchain, Cadence, FCL.
                 Testing, QA, project management, process improvement, marketing, community management, CX, customer service, developer relations.
                 Discord setup, administration, web3 token-grating, bot development, security, monitoring, and moderation.
@@ -238,17 +238,36 @@
     </footer>
     
     <script>
-        function timeSince(date) {
-            var seconds = Math.floor((new Date() - new Date(date)) / 1000),
-                yearsAgo = Math.floor(seconds / 31536000),
-                monthsAgo = Math.floor(seconds / 2592000) % 12,
-                years = (yearsAgo > 0) ? `${ yearsAgo } year${yearsAgo !== 1 ? 's' : ''}` : '',
-                months = (monthsAgo > 0) ? `${ monthsAgo } month${monthsAgo !== 1 ? 's' : ''}` : '';
+        function timeSince(startDate) {
+            let now = new Date();
+            let start = new Date(startDate);
 
-            return `${ years } ${ months }`.trim();
+            let years = now.getFullYear() - start.getFullYear();
+            let months = now.getMonth() - start.getMonth();
+
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+
+            let result = '';
+            
+            if (years > 0) {
+                result += years + ' year' + (years > 1 ? 's ' : ' ');
+            }
+            
+            if (months > 0) {
+                result += months + ' month' + (months > 1 ? 's' : '');
+            }
+            
+            if (years === 0 && months === 0) {
+                result = "Less than a month";
+            }
+            
+            return result;
         }
         
-        document.getElementById("duration").innerHTML = timeSince('October 2021');
+        document.getElementById("duration").innerHTML = timeSince('2021-10-01');
         
         // copyright year
         document.getElementById('year').innerHTML = new Date().getFullYear();
