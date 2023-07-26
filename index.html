@@ -120,11 +120,21 @@
 
     <article id="experience">
         <h2>Experience</h2>
+
+        <section>
+            <h3>Sr Frontend Engineer</h3>
+            <h4>SoundCloud</h4>
+            <aside>April 2023 – Present &nbsp;•&nbsp; <span id="duration2">1 month</span></aside>
+
+            <p>
+                <!--  -->
+            </p>
+        </section>
         
         <section>
             <h3>Co-Founder</h3>
             <h4>Yarb</h4>
-            <aside>October 2021 – Present &nbsp;•&nbsp; <span id="duration">1 year 8 months</span></aside>
+            <aside>October 2021 – Present &nbsp;•&nbsp; <span id="duration1">1 year 8 months</span></aside>
 
             <p>
                 Yarb provides thoughtful solutions to complex problems in web2, web3, marketing, community, social media, communications, and digital strategy.
@@ -267,7 +277,8 @@
             return result;
         }
         
-        document.getElementById("duration").innerHTML = timeSince('2021-10-01');
+        document.getElementById("duration1").innerHTML = timeSince('2021-10-01');
+        document.getElementById("duration2").innerHTML = timeSince('2023-04-01');
         
         // copyright year
         document.getElementById('year').innerHTML = new Date().getFullYear();
