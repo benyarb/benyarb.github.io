@@ -10,16 +10,30 @@
     <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
 
     <style>
-        html { background-color: #fff; }
+        :root {
+            --highlight: rgba(0, 0, 0, .95);
+            --foreground: rgba(0, 0, 0, .85);
+            --background: rgba(255, 255, 255, 1);
+        }
+        
+        @media (prefers-color-scheme: dark) {
+          :root {
+              --highlight: rgba(255, 255, 255, .95);
+              --foreground: rgba(255, 255, 255, .85);
+              --background: rgba(0, 0, 0, 1);
+          }
+        }
+        
+        html { background: var(--background); }
 
         body {
             padding: 60px 18px 36px 18px;
-            color: rgba(0,0,0,.85);
+            color: var(--foreground);
         }
 
         h1, h2, h3, h4, h5 {
             font-family: 'Lato', sans-serif;
-            color: rgba(0,0,0,.95);
+            color: var(--highlight);
         }
 
         p, aside, ul {
@@ -27,7 +41,7 @@
             line-height: 1.5em;
         }
 
-        a { color: rgba(0, 0, 0, 0.84); }
+        a { color: var(--highlight); }
 
         header {
             margin-bottom: 24px;
@@ -121,7 +135,7 @@
         </p>
         
         <p>
-            Based in Atlanta, I excel in dynamic environments that prioritize continuous learning of new <a href="#skills">skills</a>. My career has spanned a range of industries, from small startups to global corporations, where I’ve consistently delivered impactful results.
+            Based in Atlanta, I excel in environments that prioritize continuous learning of new <a href="#skills">skills</a>. My career has spanned a range of industries, from small startups to global corporations, where I’ve consistently delivered impactful results.
         </p>
     </article>
 
