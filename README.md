@@ -1,2 +1,2 @@
-# www.benyarb.com
-This repository contains the code for Atlanta Web Developer Ben Yarbrough's website.
+# benyarb.com
+Static HTML and CSS for Atlanta Web Developer Ben Yarbrough's website.
