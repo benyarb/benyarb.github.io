@@ -1,2 +1,2 @@
-# benyarb.com
-Static HTML and CSS for Atlanta Web Developer Ben Yarbrough's website.
+# [benyarb.com](https://benyarb.com)
+HTML and CSS for Atlanta Software Engineer Ben Yarbrough's website.
