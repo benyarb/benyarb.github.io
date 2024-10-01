@@ -302,8 +302,8 @@
     
     <script>
         function timeSince(startDate) {
-            let now = new Date();
-            let start = new Date(startDate);
+            const now = new Date();
+            const start = new Date(startDate);
 
             let years = now.getFullYear() - start.getFullYear();
             let months = now.getMonth() - start.getMonth();
